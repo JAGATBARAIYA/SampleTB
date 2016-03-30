@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--TimeBuddy-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="TimeBuddy" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="3Kh-ob-x2a" userLabel="Group main">
+                            <items>
+                                <group width="134" height="0.17000000000000001" alignment="center" id="hAW-33-Wzf" userLabel="Group TimeZoneNAme">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="bottom" text="TimeZone Name" textAlignment="center" id="TKc-P7-5up">
+                                            <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.27000000000000002" alignment="left" layout="vertical" id="1Vd-Mf-62M" userLabel="Group top">
+                                    <items>
+                                        <button width="1" height="1" alignment="left" title="0510:59 PM" id="HZr-r4-gFj">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="20"/>
+                                            <connections>
+                                                <action selector="btnAnalougTapped:" destination="AgC-eL-Hgc" id="16U-ue-teq"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <separator width="126" alignment="center" alpha="0.59999999999999998" id="2zf-eL-E3g"/>
+                                <group width="1" height="0.27000000000000002" alignment="left" layout="vertical" id="jHG-jt-PCP" userLabel="Group middle">
+                                    <items>
+                                        <button width="1" height="1" alignment="left" title="05:10:59" id="DUM-a0-6Oj">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="20"/>
+                                            <connections>
+                                                <action selector="btnAnalougTapped:" destination="AgC-eL-Hgc" id="m91-LL-HDo"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <separator width="126" alignment="center" alpha="0.59999999999999998" id="JHL-Rf-674"/>
+                                <group width="1" height="0.27000000000000002" alignment="left" layout="vertical" id="wZf-7O-WeB" userLabel="Group Bottom">
+                                    <items>
+                                        <button width="1" height="1" alignment="left" title="0510:59" id="zY5-6N-M1h">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="20"/>
+                                            <connections>
+                                                <action selector="btnAnalougTapped:" destination="AgC-eL-Hgc" id="LlY-vr-uvl"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" red="0.21415942877034722" green="0.47009285444086379" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="1" height="147" alignment="left" verticalAlignment="bottom" hidden="YES" layout="vertical" id="XPq-gO-blt" userLabel="Group Analoug">
+                            <items>
+                                <group width="1" height="0.10000000000000001" alignment="left" id="lH2-1H-U47" userLabel="Group back">
+                                    <items>
+                                        <button height="1" alignment="left" verticalAlignment="center" title="Back" id="giL-C3-knK">
+                                            <connections>
+                                                <action selector="btnBackTapped:" destination="AgC-eL-Hgc" id="Cqv-UP-8jY"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="131" alignment="left" id="o1D-a7-hVU" userLabel="Group clock"/>
+                            </items>
+                            <color key="backgroundColor" red="0.88235294119999996" green="0.58039215690000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="btnBottom" destination="zY5-6N-M1h" id="V8Z-zO-ppr"/>
+                        <outlet property="btnMiddle" destination="DUM-a0-6Oj" id="0Vp-JA-UbG"/>
+                        <outlet property="btnTop" destination="HZr-r4-gFj" id="88O-GD-7S6"/>
+                        <outlet property="groupAnaloug" destination="XPq-gO-blt" id="flf-f0-WYN"/>
+                        <outlet property="groupDigital" destination="3Kh-ob-x2a" id="23x-Ri-zUB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="174" y="205.5"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <group alignment="left" id="eew-Gs-W6Y"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="174" y="432"/>
+        </scene>
+    </scenes>
+</document>
